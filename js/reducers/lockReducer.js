@@ -7,14 +7,25 @@ const initialState = {
     ]
 }
 
-const createNewLock = action => ({state: action.state, timestamp: action.timestamp})
+const createNewLockState = (action, newLockState) => {
+    return {state: newLockState, timestamp: action.timestamp}
+}
+
+const getPreviousLockState = lockStates => {
+    return lockStates[lockStates.length - 1].state === "locked" ? "unlocked" : "locked" 
+}
 
 const lockReducer = (state = initialState, action) => {
     switch (action.type) {
         case "TOGGLE_LOCK":
-            return state[action.id].length > 9 ? 
-                [ ...state.slice(1, state.length - 1), createNewLock(action)] : 
-                [ ...state[action.id], createNewLock(action)]
+            const lockStates = state[action.slug];
+            return lockStates.length > 9 ? 
+                { [action["slug"]] : 
+                    [ ...lockStates.slice(1, lockStates.length), createNewLockState(action, getPreviousLockState(lockStates))]
+                } : 
+                { [action["slug"]] :
+                    [ ...lockStates, createNewLockState(action, getPreviousLockState(lockStates))]
+                }
         default:
             return state
     }

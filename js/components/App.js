@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import HeaderContainer from "../containers/HeaderContainer"
 import { Switch, Route } from "react-router-dom"
+import HeaderContainer from "../containers/HeaderContainer"
+import LockContainer from "../containers/LockContainer"
 
 const App = () => (
     <div>
@@ -12,6 +13,7 @@ const App = () => (
                 Condos, and Multifamily Real Estate..
             </h3>
         )} />
+        <Route path="/device/:deviceName" component={LockContainer} />
         </Switch>
     </div>
 ) 

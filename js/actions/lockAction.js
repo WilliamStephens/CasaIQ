@@ -1,10 +1,9 @@
 import { getTimestampSeconds } from "../utilities/date"
 
-export const toggleLock = (state, id) => {
+export const toggleLock = id => {
     return {
         type: "TOGGLE_LOCK",
-        state: state,
         timestamp: getTimestampSeconds(),
-        id
+        slug: id
     }
 }

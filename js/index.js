@@ -7,8 +7,6 @@ import { AppContainer } from 'react-hot-loader'
 import App from './components/App'
 import deviceApp from "./reducers"
 
-const rootElement = document.querySelector('#app')
-
 let store = createStore(deviceApp)
 
 const render = Component =>
@@ -20,11 +18,11 @@ const render = Component =>
         </Router>
       </AppContainer>
     </Provider>,
-    rootElement
-  );
+    document.querySelector('#app')
+  )
 
-render(App);
+render(App)
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => render(App));
+  module.hot.accept('./components/App', () => render(App))
 } 
