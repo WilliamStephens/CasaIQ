@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Header from "./header/Header"
+import HeaderContainer from "../containers/HeaderContainer"
 import { Switch, Route } from "react-router-dom"
 
 const App = () => (
     <div>
-        <Header/>
+        <HeaderContainer/>
         <Switch>
         <Route path="/about-us" render={() => (
             <h3>
