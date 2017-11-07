@@ -1,15 +1,10 @@
-import { connect } from "react-redux"
-import { toggleLock } from "../actions/lockAction"
-import Header from "../components/header/Header"
+import { connect } from 'react-redux';
+import Header from '../components/header/Header';
 
-const mapStateToProps = state => {
-    return {
-        deviceNames: Object.keys(state.lockReducer)
-    }
-}
+const mapStateToProps = state => ({
+  deviceNames: Object.keys(state.deviceReducer),
+});
 
-const HeaderContainer = connect(
-    mapStateToProps
-)(Header)
+const HeaderContainer = connect(mapStateToProps)(Header);
 
-export default HeaderContainer
+export default HeaderContainer;

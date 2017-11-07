@@ -1,5 +1,5 @@
 {
-  "name": "CasaIQ",
+  "name": "casaiq",
   "version": "1.0.0",
   "description": "CasaIQ react redux app",
   "main": "index.js",
@@ -19,26 +19,33 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.58.0",
     "jest": "^21.2.1",
-    "react-hot-loader": "next",
-    "react-redux": "^5.0.6",
+    "prettier-eslint": "^8.2.1",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2",
     "redux-devtools": "^3.4.0",
-    "styled-components": "^2.2.3",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1",
-    "webpack-hot-middleware": "^2.19.1"
+    "styled-components": "^2.2.3"
   },
   "dependencies": {
     "babel-preset-env": "^1.6.0",
     "bulma": "^0.5.3",
     "express": "^4.16.1",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-hot-loader": "next",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-hot-middleware": "^2.19.1"
   },
   "babel": {
     "presets": [

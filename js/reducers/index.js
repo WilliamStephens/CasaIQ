@@ -1,8 +1,9 @@
-import { combineReducers } from "redux"
-import lockReducer from "./lockReducer";
+import { combineReducers } from 'redux';
+import deviceReducer from './deviceReducer';
 
 const deviceApp = combineReducers({
-    lockReducer
-})
+  deviceReducer,
+});
 
-export default deviceApp
+export default deviceApp;
+

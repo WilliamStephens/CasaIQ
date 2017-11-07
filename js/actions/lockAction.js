@@ -1,9 +1,10 @@
-import { getTimestampSeconds } from "../utilities/date"
+import { getTimestampSeconds } from '../utilities/date';
 
-export const toggleLock = id => {
-    return {
-        type: "TOGGLE_LOCK",
-        timestamp: getTimestampSeconds(),
-        slug: id
-    }
-}
+const toggleLock = id => ({
+  type: 'TOGGLE_LOCK',
+  timestamp: getTimestampSeconds(),
+  slug: id,
+});
+
+export default toggleLock;
+
