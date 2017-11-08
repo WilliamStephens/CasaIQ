@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lock render 1`] = `
+<div
+  className="box has-text-centered"
+>
+  <div>
+    <h3
+      className="title"
+    >
+      Apt 145 Lock
+    </h3>
+  </div>
+  <button
+    className="button is-success"
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "0.5em",
+      }
+    }
+    type="button"
+  >
+    unlock
+  </button>
+</div>
+`;

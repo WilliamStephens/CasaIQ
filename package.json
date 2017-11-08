@@ -4,8 +4,8 @@
   "description": "CasaIQ react redux app",
   "main": "index.js",
   "scripts": {
-    "start": "test-watch && node server/server.js",
-    "test": "jest",
+    "start": "npm run test && node server/server.js",
+    "test": "jest --no-cache",
     "test-watch": "jest --watch"
   },
   "author": "Wil Stephens",
@@ -24,6 +24,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.58.0",
@@ -43,21 +44,11 @@
     "react-hot-loader": "next",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.0.0",
     "redux": "^3.7.2",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-hot-middleware": "^2.19.1"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "modules": false
-        }
-      ],
-      "react"
-    ]
   }
 }
